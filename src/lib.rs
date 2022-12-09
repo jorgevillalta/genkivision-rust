@@ -22,6 +22,9 @@ pub trait Voting {
     fn up_vote(&mut self);
     fn down_vote(&mut self);
     fn clear_votes(&mut self);
+    fn votes(&self) -> (u8, u8) {
+        (0, 0)
+    }
 }
 
 impl Voting for Song {
@@ -37,4 +40,12 @@ impl Voting for Song {
         self.up_votes = 0;
         self.down_votes = 0;
     }
+
+    fn votes(&self) -> (u8, u8) {
+        (self.up_votes, self.down_votes)
+    }
 }
+
+/* fn up_votes<T: Voting>(voting: &mut T) {
+    voting.up_vote();
+} */

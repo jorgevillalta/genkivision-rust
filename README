@@ -1,0 +1,34 @@
+# Taller Genkivision - RUST
+
+## Planificación
+
+1. Intro al proyecto de genkivision.
+1. Intro a Rust, cargo, ...
+1. Intro a proyecto/programa Rust.
+   1. Cargo toml.
+   1. Fichero `main.rs`.
+   1. Función `main`.
+   1. Macro `println!`.
+   1. `cargo run`, `cargo build`, ...
+1. Pedir una cadena por terminal (user input), por ejemplo, el nombre del participante:
+   1. Explicación breve del uso de `String`, mutabilidad.
+   1. Importar la libreria **io**, para lectura por terminal y uso de la función `ìo::stdin().read_line...`. Explicar como funcionan los _::_ en Rust.
+   1. Tipos básicos de variables y arrays.
+1. El nucleo de Rust: Propiedad y prestamo de variables:
+   1. Explicación mediante una función.
+   1. Migrar la funcionalidad anterior a una función que devuelva la cadena pedida por terminal (explicar el retorno de variables en Rust).
+1. Explicar la forma de gestionar los datos con **structs** y las implementaciones sobre estos:
+   1. Montar el `struct` para guardar los datos de una canción propuesta por un participante y su implementación con la función `::new`.
+   1. Pedir por terminal los datos para guardar en el `struct`.
+1. Explicar los **loops** básicos (`loop`, `for`, ...):
+   1. Explicar el uso de los vectores dinámicos `vec` y utilizarlos para almacenar los `struct` de canciones.
+   1. Usar un `loop` infinito para pedir los datos a varios participantes y salir de él cuando se de una condición.
+   1. Usar el `match` de alguna forma y asi explicarlo como alternativa _más segura_ a los `if` anidados.
+   1. Ejemplo de incrementar los votos positivos o negativos.
+1. Explicar los **traits** y su implementación:
+   1. Definir el `trait` de votar e implementarlo en el `struct` de las canciones propuestas (usar las tuplas para devolver los votos positivos y negativos de una sola vez).
+   1. Crear una función que reciba una implementación del `trait` creado y reescribir el ejemplo anterior donde se incrementaban los votos.
+   1. Mover lo creado al fichero de bibliotecas `.lib` y explicar como importar desde ahí.
+
+--**PENSAR EN UN EJEMPLO DE ENUM SENCILLO**--
+--**PENSAR EN UN EJEMPLO DE OPTION SENCILLO**--
