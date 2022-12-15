@@ -3,8 +3,8 @@
 ## Planificación
 
 1. Intro al proyecto de genkivision.
-1. Intro a Rust, cargo, ...
-1. Intro a proyecto/programa Rust.
+1. Intro a Rust, cargo, gestión bibliotecas (crates)...
+1. Intro a proyecto/programa Rust. -> `cargo new ...`
    1. Cargo toml.
    1. Fichero `main.rs`.
    1. Función `main`.
@@ -12,17 +12,24 @@
    1. `cargo run`, `cargo build`, ...
 1. Pedir una cadena por terminal (user input), por ejemplo, el nombre del participante:
    1. Explicación breve del uso de `String`, mutabilidad.
-   1. Importar la libreria **io**, para lectura por terminal y uso de la función `ìo::stdin().read_line...`. Explicar como funcionan los _::_ en Rust.
-   1. Tipos básicos de variables y arrays.
+      1. La sintaxis `::new` indica que `new` es una función asociada al tipo `String`. Explicar como funcionan los _::_ en Rust.
+   1. Importar la libreria **io**, para lectura por terminal.
+   1. Uso de la función `ìo::stdin().read_line...`. Explicar lo que significa pasar una variable por referencia mutable.
+   1. Tipos básicos de variables y arrays (mostrar código de ejemplo).
 1. El nucleo de Rust: Propiedad y prestamo de variables:
+   1. Stack y heap.
    1. Explicación mediante una función.
    1. Migrar la funcionalidad anterior a una función que devuelva la cadena pedida por terminal (explicar el retorno de variables en Rust).
 1. Explicar la forma de gestionar los datos con **structs** y las implementaciones sobre estos:
-   1. Montar el `struct` para guardar los datos de una canción propuesta por un participante y su implementación con la función `::new`.
+   1. Montar el `struct` para guardar los datos de una canción propuesta por un participante y utilizarla para guardar la canción obtenida anteriormente.
+   1. Montar su implementación con la función `::new` y los valores por defecto.
    1. Pedir por terminal los datos para guardar en el `struct`.
+   1. Montar en la implementación una función `to_string` que devuelva la cadena de texto con toda la info de la canción.
 1. Explicar los **loops** básicos (`loop`, `for`, ...):
+   1. Explicar un `for` simple con rango para iterar n veces y pedir los datos de varias canciones.
+   1. Cambiar a un `loop` infinito y salir de él cuando se de una condición.
    1. Explicar el uso de los vectores dinámicos `vec` y utilizarlos para almacenar los `struct` de canciones.
-   1. Usar un `loop` infinito para pedir los datos a varios participantes y salir de él cuando se de una condición.
+   1. Explicar el uso de los `if`.
    1. Usar el `match` de alguna forma y asi explicarlo como alternativa _más segura_ a los `if` anidados.
    1. Ejemplo de incrementar los votos positivos o negativos.
 1. Explicar los **traits** y su implementación:
@@ -32,3 +39,7 @@
 
 --**PENSAR EN UN EJEMPLO DE ENUM SENCILLO**--
 --**PENSAR EN UN EJEMPLO DE OPTION SENCILLO**--
+
+## Enlaces de interés
+
+[1. (Programming a Guessing Game](https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html)
